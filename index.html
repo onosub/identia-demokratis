@@ -1,24 +1,24 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="ev">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07345b">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="A fictional political party website created as part of the Elevant worldbuilding project.">
-<title>Identia Demokratis | For Elevant. For the Future.</title>
+<meta name="description" content="A fictional political party website in Elevanfia.">
+<title>Identia Demokratis | For Elevanfia. For framtid.</title>
+
 <style>
 :root {
-  --navy:#062744;
-  --navy2:#0a3c66;
-  --blue:#0077bd;
-  --bright:#39a9ef;
-  --pale:#e8f4fc;
-  --light:#f2f7fb;
-  --ink:#183348;
+  --navy:#031f4f;
+  --navy2:#0757a6;
+  --blue:#087fe8;
+  --bright:#59c7ff;
+  --pale:#e2f3ff;
+  --light:#edf7ff;
+  --ink:#102f50;
   --muted:#63798a;
-  --line:#d9e5ee;
+  --line:#cfe4f6;
   --max:1240px;
 }
 * { box-sizing:border-box; }
@@ -33,6 +33,7 @@ body {
 a { color:inherit;text-decoration:none; }
 img { display:block;max-width:100%; }
 .container { width:min(var(--max),calc(100% - 48px));margin:auto; }
+
 .utility {
   background:#031a2d;
   color:#d8e9f5;
@@ -97,7 +98,7 @@ nav a:hover { color:var(--blue); }
   background:var(--blue);
   color:white!important;
   padding:12px 18px;
-  border-radius:3px;
+  border-radius:999px;
 }
 .menu-toggle {
   display:none;
@@ -107,6 +108,7 @@ nav a:hover { color:var(--blue); }
   padding:9px 12px;
   font:inherit;
 }
+
 .hero {
   position:relative;
   min-height:610px;
@@ -114,10 +116,7 @@ nav a:hover { color:var(--blue); }
   background:var(--navy);
   overflow:hidden;
 }
-.hero-image {
-  position:absolute;
-  inset:0;
-}
+.hero-image { position:absolute;inset:0; }
 .hero-image img {
   width:100%;
   height:100%;
@@ -128,8 +127,9 @@ nav a:hover { color:var(--blue); }
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(90deg,rgba(3,25,45,.93) 0%,rgba(4,39,67,.78) 42%,rgba(3,30,53,.25) 100%),
-             linear-gradient(0deg,rgba(3,25,45,.48),transparent 55%);
+  background:
+    linear-gradient(105deg,rgba(2,20,61,.94),rgba(3,65,130,.76) 45%,rgba(0,112,204,.24)),
+    linear-gradient(0deg,rgba(3,25,45,.48),transparent 55%);
 }
 .hero-content {
   position:relative;
@@ -139,8 +139,7 @@ nav a:hover { color:var(--blue); }
   flex-direction:column;
   align-items:flex-start;
   justify-content:center;
-  padding-top:65px;
-  padding-bottom:75px;
+  padding:65px 0 75px;
 }
 .eyebrow,.kicker {
   text-transform:uppercase;
@@ -182,6 +181,7 @@ nav a:hover { color:var(--blue); }
   font-weight:800;
   border:1px solid transparent;
   transition:.2s;
+  border-radius:999px;
 }
 .btn:hover { transform:translateY(-2px); }
 .btn-primary { background:var(--blue);color:white; }
@@ -197,6 +197,7 @@ nav a:hover { color:var(--blue); }
   letter-spacing:.14em;
   color:white;
 }
+
 .stats-band { background:#fff;border-bottom:1px solid var(--line); }
 .stats { display:grid;grid-template-columns:repeat(3,1fr); }
 .stat {
@@ -216,6 +217,7 @@ nav a:hover { color:var(--blue); }
   white-space:nowrap;
 }
 .stat-label { font-size:.77rem;color:#526b7d;line-height:1.45; }
+
 .section { padding:86px 0; }
 .section-blue { background:var(--light); }
 .section-heading {
@@ -234,11 +236,17 @@ nav a:hover { color:var(--blue); }
   margin:10px 0 0;
 }
 .section-intro { max-width:470px;color:var(--muted);margin:0; }
-.policy-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:18px; }
+
+.policy-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
 .policy-card {
   background:white;
   border:1px solid var(--line);
   border-top:3px solid var(--blue);
+  border-radius:20px 4px 20px 4px;
   padding:27px;
   min-height:245px;
   transition:.2s;
@@ -258,16 +266,24 @@ nav a:hover { color:var(--blue); }
   height:4px;
   background:var(--blue);
   margin:22px 0 18px;
+  border-radius:99px;
 }
 .policy-card h3 { color:var(--navy);font-size:1.2rem;margin:0 0 8px; }
 .policy-card p { color:var(--muted);font-size:.88rem;margin:0; }
+
 .news-layout { display:grid;grid-template-columns:1.2fr .8fr;gap:24px; }
 .feature-news {
   background:white;
   border:1px solid var(--line);
+  border-radius:22px;
   overflow:hidden;
 }
-.news-image { height:290px;overflow:hidden;background:var(--navy2); }
+.news-image {
+  height:290px;
+  overflow:hidden;
+  background:var(--navy2);
+  border-radius:22px 22px 0 0;
+}
 .news-image img { width:100%;height:100%;object-fit:cover; }
 .news-content { padding:25px 28px 30px; }
 .news-meta { display:flex;align-items:center;gap:12px;color:#6f8392;font-size:.75rem; }
@@ -275,6 +291,7 @@ nav a:hover { color:var(--blue); }
   background:var(--pale);
   color:var(--blue);
   padding:4px 9px;
+  border-radius:999px;
   font-size:.67rem;
   font-weight:800;
   text-transform:uppercase;
@@ -298,10 +315,24 @@ nav a:hover { color:var(--blue); }
 .news-date { font-size:.7rem;font-weight:800;color:#73899a; }
 .news-row h3 { font-size:1rem;line-height:1.35;color:var(--navy);margin:0 0 7px; }
 .news-row p { font-size:.8rem;color:var(--muted);margin:0; }
-.leader-band { background:var(--navy);color:white; }
+.note { font-size:.75rem;color:var(--muted); }
+
+.leader-band {
+  background:linear-gradient(125deg,#031a46,#064e9c 70%,#087fe8);
+  color:white;
+}
 .leader-grid { display:grid;grid-template-columns:1fr 1fr;min-height:490px; }
-.leader-visual { min-height:490px;overflow:hidden; }
-.leader-visual img { width:100%;height:100%;object-fit:cover;object-position:center top; }
+.leader-visual {
+  min-height:490px;
+  overflow:hidden;
+  border-radius:0 90px 90px 0;
+}
+.leader-visual img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
 .leader-copy {
   padding:65px clamp(30px,6vw,90px);
   display:flex;
@@ -317,6 +348,7 @@ nav a:hover { color:var(--blue); }
   letter-spacing:-.04em;
 }
 .leader-copy p { color:#d0e0ec;max-width:520px;margin:0 0 25px; }
+
 .parliament {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -327,8 +359,14 @@ nav a:hover { color:var(--blue); }
   min-height:360px;
   overflow:hidden;
   background:var(--navy2);
+  border-radius:80px 8px 80px 8px;
 }
-.parliament-visual img { width:100%;height:100%;min-height:360px;object-fit:cover; }
+.parliament-visual img {
+  width:100%;
+  height:100%;
+  min-height:360px;
+  object-fit:cover;
+}
 .parliament-copy p { color:var(--muted); }
 .parliament-facts {
   display:grid;
@@ -339,7 +377,12 @@ nav a:hover { color:var(--blue); }
 .fact { border-left:3px solid var(--blue);padding-left:14px; }
 .fact strong { display:block;font-size:1.65rem;color:var(--navy); }
 .fact span { font-size:.76rem;color:var(--muted); }
-.join-band { background:#dceefa;padding:58px 0; }
+
+.join-band {
+  background:linear-gradient(115deg,#d9efff,#eaf7ff 58%,#c5e6ff);
+  padding:58px 0;
+  border-radius:70px 0 0 0;
+}
 .join-inner {
   display:flex;
   justify-content:space-between;
@@ -353,6 +396,7 @@ nav a:hover { color:var(--blue); }
   margin:0 0 10px;
 }
 .join-inner p { color:#526e81;margin:0; }
+
 .footer { background:#031a2d;color:#d9e7f0;padding:60px 0 22px; }
 .footer-grid {
   display:grid;
@@ -364,7 +408,13 @@ nav a:hover { color:var(--blue); }
 .footer .brand-sub { color:#9bb6c9; }
 .footer-about { max-width:330px;color:#a9bdcc;font-size:.84rem; }
 .footer h4 { color:white;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase; }
-.footer-links { display:flex;flex-direction:column;gap:10px;font-size:.82rem;color:#b8cbd8; }
+.footer-links {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:.82rem;
+  color:#b8cbd8;
+}
 .footer-links a:hover { color:white; }
 .footer-bottom {
   border-top:1px solid #29445a;
@@ -375,6 +425,7 @@ nav a:hover { color:var(--blue); }
   font-size:.72rem;
   color:#91a9ba;
 }
+
 @media(max-width:980px) {
   .header-inner { min-height:76px; }
   .menu-toggle { display:block; }
@@ -409,7 +460,11 @@ nav a:hover { color:var(--blue); }
   .hero h1 { font-size:clamp(2.8rem,12vw,4.5rem); }
   .hero-lead { font-size:.98rem; }
   .stats { grid-template-columns:1fr; }
-  .stat,.stat:first-child { padding:17px 0;border-right:0;border-bottom:1px solid var(--line); }
+  .stat,.stat:first-child {
+    padding:17px 0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
   .stat:last-child { border-bottom:0; }
   .section { padding:62px 0; }
   .section-heading { align-items:flex-start;flex-direction:column;gap:14px; }
@@ -431,31 +486,35 @@ nav a:hover { color:var(--blue); }
 }
 </style>
 </head>
+
 <body>
 <div class="utility">
   <div class="container">
-    <span>FICTIONAL WORLDBUILDING PROJECT · NOT A REAL POLITICAL PARTY</span>
-    <span>OFFICIAL WEBSITE OF IDENTIA DEMOKRATIS</span>
-    <span>EN / EV</span>
+    <span>Elevanfiaor vae fiktiv · nif real politisk elivor</span>
+    <span>Identia Demokratis · ofisiel livöne</span>
+    <span>EV</span>
   </div>
 </div>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="Identia Demokratis home">
+    <a class="brand" href="#top" aria-label="Identia Demokratis">
       <span class="brand-mark"><img src="id-logo.png" alt="ID party logo"></span>
-      <span class="brand-name">IDENTIA DEMOKRATIS
-        <span class="brand-sub">THE ID PARTY · ELEVANT</span>
+      <span class="brand-name">
+        IDENTIA DEMOKRATIS
+        <span class="brand-sub">ID elivorsjav · Elevanfia</span>
       </span>
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">MENU ☰</button>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">MENÜ ☰</button>
+
     <nav id="main-nav" aria-label="Main navigation">
-      <a href="#about">The Party</a>
-      <a href="#policies">Our Policies</a>
-      <a href="#news">News</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#parliament">Parliament</a>
-      <a class="nav-cta" href="#contact">Get Involved ↗</a>
+      <a href="#about">Elivorsjav</a>
+      <a href="#policies">Vølen</a>
+      <a href="#news">Nøva</a>
+      <a href="#leadership">Ledersjav</a>
+      <a href="#parliament">Polisæš</a>
+      <a class="nav-cta" href="#contact">Sim vi ↗</a>
     </nav>
   </div>
 </header>
@@ -463,33 +522,37 @@ nav a:hover { color:var(--blue); }
 <main id="top">
   <section class="hero" id="about">
     <div class="hero-image">
-      <img src="hero-rally.jpg" alt="A view of Balesden, the capital of Elevant">
+      <img src="hero-rally.jpg" alt="A view of Balesden, the capital of Elevanfia">
     </div>
+
     <div class="container hero-content">
-      <div class="eyebrow">A confident future for Elevant</div>
-      <h1>For Elevant.<br><span>For the Future.</span></h1>
-      <p class="hero-lead">A secure, fair and forward-looking country — built on shared responsibility, democratic institutions and opportunity for every citizen.</p>
+      <div class="eyebrow">Ön bol framtid for Elevanfia</div>
+      <h1>For Elevanfia.<br><span>For framtid.</span></h1>
+      <p class="hero-lead">
+        Ön sæf, elivorlik en framtidsvend land — bygget ael fælles ansvar,
+        demokratisk institusjon en løm for alle borgere.
+      </p>
       <div class="actions">
-        <a class="btn btn-primary" href="#policies">Explore our policies →</a>
-        <a class="btn btn-outline" href="#party">About the party ↗</a>
+        <a class="btn btn-primary" href="#policies">Iskara vølen →</a>
+        <a class="btn btn-outline" href="#party">Om elivorsjav ↗</a>
       </div>
     </div>
-    <div class="hero-caption">BALESDEN · ELEVANT</div>
+    <div class="hero-caption">BALESDEN · ELEVANFIA</div>
   </section>
 
   <div class="stats-band">
     <div class="container stats">
       <div class="stat">
         <div class="stat-number">1995</div>
-        <div class="stat-label">Founded to shape<br>the future of Elevant</div>
+        <div class="stat-label">Stiftet for at forme<br>Elevanfia sin framtid</div>
       </div>
       <div class="stat">
         <div class="stat-number">239 / 650</div>
-        <div class="stat-label">Seats in the lower house<br>As of 24 January 2026 · Fictional setting</div>
+        <div class="stat-label">Sæter ael underhus<br>24 jan 2026 · fiktiv setting</div>
       </div>
       <div class="stat">
         <div class="stat-number">ID</div>
-        <div class="stat-label">Identia Demokratis<br>Identity and democracy</div>
+        <div class="stat-label">Identia Demokratis<br>Identia en demokrati</div>
       </div>
     </div>
   </div>
@@ -498,41 +561,56 @@ nav a:hover { color:var(--blue); }
     <div class="container">
       <div class="section-heading">
         <div>
-          <div class="kicker">What we stand for</div>
-          <h2>Priorities for Elevant.</h2>
+          <div class="kicker">Va vi staar for</div>
+          <h2>Vølen for Elevanfia.</h2>
         </div>
-        <p class="section-intro">Our programme brings together national responsibility, social security and a practical vision for the country’s future.</p>
+        <p class="section-intro">
+          Vin program samler nationalt ansvar, social sæfhed en en praktisk
+          vision for landets framtid.
+        </p>
       </div>
+
       <div class="policy-grid">
         <article class="policy-card">
-          <div class="card-index">01 / SECURITY</div><div class="policy-icon"></div>
-          <h3>Security &amp; sovereignty</h3>
-          <p>Protecting democratic institutions, strengthening national resilience and ensuring that Elevant can shape its own future.</p>
+          <div class="card-index">01 / SÆFHED</div>
+          <div class="policy-icon"></div>
+          <h3>Sæfhed en suverænitet</h3>
+          <p>Beskytte demokratisk institusjoner, styrke national modstandskraft en sikre at Elevanfia kan forme sin egen framtid.</p>
         </article>
+
         <article class="policy-card">
-          <div class="card-index">02 / OPPORTUNITY</div><div class="policy-icon"></div>
-          <h3>A strong social contract</h3>
-          <p>Reliable healthcare, education and pensions, supported by a sustainable economy and shared civic responsibility.</p>
+          <div class="card-index">02 / LØM</div>
+          <div class="policy-icon"></div>
+          <h3>En stærk social kontrakt</h3>
+          <p>Pålidelig sundhed, uddannelse en pension, støttet af en bæredygtig økonomi en fælles borgeransvar.</p>
         </article>
+
         <article class="policy-card">
-          <div class="card-index">03 / INTEGRATION</div><div class="policy-icon"></div>
-          <h3>Fair and orderly migration</h3>
-          <p>Clear rules, language learning and participation in working life, alongside equal treatment under the law.</p>
+          <div class="card-index">03 / INTEGRATION</div>
+          <div class="policy-icon"></div>
+          <h3>Retfærdig en ordnet migration</h3>
+          <p>Klare regler, sproglæring en deltagelse i arbejdsliv, med lige behandling under loven.</p>
         </article>
+
         <article class="policy-card">
-          <div class="card-index">04 / EQUALITY</div><div class="policy-icon"></div>
-          <h3>Equal rights</h3>
-          <p>Defending equal treatment, gender equality and the civil rights of people across Elevantian society.</p>
+          <div class="card-index">04 / LIGHEIT</div>
+          <div class="policy-icon"></div>
+          <h3>Lige rettigheder</h3>
+          <p>Forsvare lige behandling, kønslighed en borgerrettigheder for alle i Elevanfia.</p>
         </article>
+
         <article class="policy-card">
-          <div class="card-index">05 / CLIMATE</div><div class="policy-icon"></div>
-          <h3>A practical green transition</h3>
-          <p>Reducing emissions over time while protecting energy security, affordability and industrial capacity.</p>
+          <div class="card-index">05 / KLIMA</div>
+          <div class="policy-icon"></div>
+          <h3>En praktisk grøn overgang</h3>
+          <p>Reducere udslip over tid, mens energisæfhed, overkommelighed en industri bevares.</p>
         </article>
+
         <article class="policy-card">
-          <div class="card-index">06 / MODERN STATE</div><div class="policy-icon"></div>
-          <h3>A state that works</h3>
-          <p>Modern public services, accessible digital administration and transparent, accountable government.</p>
+          <div class="card-index">06 / MODERN STAT</div>
+          <div class="policy-icon"></div>
+          <h3>En stat der virker</h3>
+          <p>Moderne offentlige tjenester, tilgængelig digital administration en transparent, ansvarlig regering.</p>
         </article>
       </div>
     </div>
@@ -542,37 +620,51 @@ nav a:hover { color:var(--blue); }
     <div class="container">
       <div class="section-heading">
         <div>
-          <div class="kicker">From the party</div>
-          <h2>Latest news &amp; statements.</h2>
+          <div class="kicker">Fra elivorsjav</div>
+          <h2>Nøva en erklæringer.</h2>
         </div>
-        <a class="text-link" href="#news-list">All news →</a>
+        <a class="text-link" href="#news-list">Alle nøva →</a>
       </div>
+
       <div class="news-layout">
         <article class="feature-news">
           <div class="news-image">
             <img src="party-congress.jpg" alt="Identia Demokratis party congress">
           </div>
           <div class="news-content">
-            <div class="news-meta"><span class="tag">Statement</span><span>24 January 2026</span></div>
-            <h3>Building a secure and confident future for Elevant</h3>
-            <p>A sample featured story demonstrating how a lead announcement can be presented on the homepage.</p>
-            <a class="text-link" href="#news-list">Read the statement →</a>
+            <div class="news-meta">
+              <span class="tag">Erklæring</span>
+              <span>24 jan 2026</span>
+            </div>
+            <h3>At bygge en sæf en tryg framtid for Elevanfia</h3>
+            <p>En eksempeltekst for en fremhævet meddelelse på forsiden.</p>
+            <a class="text-link" href="#news-list">Læs erklæring →</a>
           </div>
         </article>
+
         <div class="news-list" id="news-list">
           <article class="news-row">
             <div class="news-date">18 JAN 2026</div>
-            <div><h3>Our priorities for the next parliamentary session</h3><p>Parliamentary update · Sample headline</p></div>
+            <div>
+              <h3>Vin vølen for næste parlamentssession</h3>
+              <p>Polisæš nyt · eksempel</p>
+            </div>
           </article>
           <article class="news-row">
             <div class="news-date">12 JAN 2026</div>
-            <div><h3>Statement from party leadership</h3><p>Press release · Sample headline</p></div>
+            <div>
+              <h3>Erklæring fra ledelsen</h3>
+              <p>Pressemeddelelse · eksempel</p>
+            </div>
           </article>
           <article class="news-row">
             <div class="news-date">05 JAN 2026</div>
-            <div><h3>Local representatives meet communities across Elevant</h3><p>Party news · Sample headline</p></div>
+            <div>
+              <h3>Lokale repræsentanter møder lokalsamfund i Elevanfia</h3>
+              <p>Parti-nøva · eksempel</p>
+            </div>
           </article>
-          <p class="note">All news items shown here are fictional layout examples.</p>
+          <p class="note">Alle nøva-elementer er fiktive eksempler.</p>
         </div>
       </div>
     </div>
@@ -584,10 +676,13 @@ nav a:hover { color:var(--blue); }
         <img src="leader-portrait.jpg" alt="Anneliese Fontaine, fictional party leader">
       </div>
       <div class="leader-copy">
-        <div class="kicker">Party leadership</div>
-        <h2>Leadership with purpose.</h2>
-        <p>Anneliese Fontaine leads Identia Demokratis with a focus on national resilience, social security and the future of Elevant.</p>
-        <div><a class="btn btn-primary" href="#party">Meet the leadership →</a></div>
+        <div class="kicker">Elivorsjav ledelse</div>
+        <h2>Ledersjav med formål.</h2>
+        <p>
+          Anneliese Fontaine leder Identia Demokratis med fokus på national
+          modstandskraft, social sæfhed en Elevanfia sin framtid.
+        </p>
+        <div><a class="btn btn-primary" href="#party">Mød ledelsen →</a></div>
       </div>
     </div>
   </section>
@@ -595,17 +690,26 @@ nav a:hover { color:var(--blue); }
   <section class="section" id="parliament">
     <div class="container parliament">
       <div class="parliament-visual">
-        <img src="parliament.png" alt="Polisæš, the fictional parliament of Elevant">
+        <img src="parliament.png" alt="Polisæš, the fictional parliament of Elevanfia">
       </div>
       <div class="parliament-copy">
-        <div class="kicker">Our work in parliament</div>
-        <h2>Turning priorities into action.</h2>
-        <p>Follow our parliamentary work, proposals and public positions. This section can later link to individual bills, speeches, votes and committee activity.</p>
+        <div class="kicker">Vin arbejde i Polisæš</div>
+        <h2>Fra vølen til handling.</h2>
+        <p>
+          Følg vin parlamentariske arbejde, forslag en offentlige positioner.
+          Her kan lovforslag, taler, afstemninger en udvalg senere vises.
+        </p>
         <div class="parliament-facts">
-          <div class="fact"><strong>239 / 650</strong><span>Lower house seats</span></div>
-          <div class="fact"><strong>39 / 120</strong><span>Upper house seats</span></div>
+          <div class="fact">
+            <strong>239 / 650</strong>
+            <span>Sæter i underhus</span>
+          </div>
+          <div class="fact">
+            <strong>39 / 120</strong>
+            <span>Sæter i overhus</span>
+          </div>
         </div>
-        <a class="text-link" href="#contact">Explore parliamentary activity →</a>
+        <a class="text-link" href="#contact">Iskara parlamentarisk arbejde →</a>
       </div>
     </div>
   </section>
@@ -613,10 +717,10 @@ nav a:hover { color:var(--blue); }
   <section class="join-band" id="contact">
     <div class="container join-inner">
       <div>
-        <h2>Take part in Elevant’s future.</h2>
-        <p>Find out more about the party, its programme and ways to get involved.</p>
+        <h2>Vær del af Elevanfia sin framtid.</h2>
+        <p>Lær mere om elivorsjav, programmet en måder at deltage.</p>
       </div>
-      <a class="btn btn-primary" href="mailto:contact@example.invalid">Contact the party ↗</a>
+      <a class="btn btn-primary" href="mailto:contact@example.invalid">Kontakt elivorsjav ↗</a>
     </div>
   </section>
 </main>
@@ -627,17 +731,50 @@ nav a:hover { color:var(--blue); }
       <div>
         <a class="brand" href="#top">
           <span class="brand-mark"><img src="id-logo.png" alt="ID party logo"></span>
-          <span class="brand-name">IDENTIA DEMOKRATIS<span class="brand-sub">THE ID PARTY · ELEVANT</span></span>
+          <span class="brand-name">
+            IDENTIA DEMOKRATIS
+            <span class="brand-sub">ID elivorsjav · Elevanfia</span>
+          </span>
         </a>
-        <p class="footer-about">A political party in the fictional Kingdom of Elevant. This website is a worldbuilding prototype and is not an official real-world political website.</p>
+        <p class="footer-about">
+          Et politisk elivorsjav i det fiktive Kongerige Elevanfia.
+          Denne livöne er en worldbuilding-prototype, ikke en virkelig officiel politisk side.
+        </p>
       </div>
-      <div><h4>The party</h4><div class="footer-links"><a href="#about">Who we are</a><a href="#leadership">Leadership</a><a href="#about">Our history</a><a href="#contact">Contact</a></div></div>
-      <div><h4>Our work</h4><div class="footer-links"><a href="#policies">Policies</a><a href="#parliament">Parliament</a><a href="#news">Newsroom</a><a href="#news">Statements</a></div></div>
-      <div><h4>Follow ID</h4><div class="footer-links"><a href="#contact">Social media</a><a href="#contact">Press enquiries</a><a href="#contact">Get involved</a></div></div>
+
+      <div>
+        <h4>Elivorsjav</h4>
+        <div class="footer-links">
+          <a href="#about">Vem vi ær</a>
+          <a href="#leadership">Ledersjav</a>
+          <a href="#about">Vin historie</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Vin arbejde</h4>
+        <div class="footer-links">
+          <a href="#policies">Vølen</a>
+          <a href="#parliament">Polisæš</a>
+          <a href="#news">Nøvaarkiv</a>
+          <a href="#news">Erklæringer</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Følg ID</h4>
+        <div class="footer-links">
+          <a href="#contact">Sociale medier</a>
+          <a href="#contact">Pressekontakt</a>
+          <a href="#contact">Sim vi</a>
+        </div>
+      </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 Identia Demokratis · Fictional worldbuilding project</span>
-      <span>Privacy · Accessibility · Legal notice</span>
+      <span>© 2026 Identia Demokratis · fiktiv worldbuilding</span>
+      <span>Privathed · Tilgængelighed · Juridisk meddelelse</span>
     </div>
   </div>
 </footer>
@@ -649,14 +786,14 @@ const nav = document.querySelector('#main-nav');
 toggle.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(open));
-  toggle.textContent = open ? 'CLOSE ×' : 'MENU ☰';
+  toggle.textContent = open ? 'LUK ×' : 'MENÜ ☰';
 });
 
 nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     nav.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.textContent = 'MENU ☰';
+    toggle.textContent = 'MENÜ ☰';
   });
 });
 </script>
